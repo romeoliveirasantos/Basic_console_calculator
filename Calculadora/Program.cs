@@ -55,8 +55,16 @@ namespace Calculadora
                         }
                     case 4:
                         {
-                            resultado = divisao(num1, num2);
-                            tipoOperação = "/";
+                            if(num2 != 0)
+                            {
+                                resultado = divisao(num1, num2);
+                                tipoOperação = "/";
+                            }
+                            else
+                            {
+                                
+                                tipoOperação = "/";
+                            }
                             break;
                         }
                     default:
@@ -69,8 +77,16 @@ namespace Calculadora
 
 
                 Loading();
-                Console.WriteLine($"O resultado da operação {num1} {tipoOperação} {num2} é: {resultado}");
-                Thread.Sleep(4000);
+                if (tipoOperação == "/" && num2 == 0)
+                {
+                    Console.WriteLine($"Não é possível divir {num1} por 0");                 
+                }
+                else
+                {
+                    Console.WriteLine($"O resultado da operação {num1} {tipoOperação} {num2} é: {resultado}");
+                }
+                Loading();
+                Thread.Sleep(2000);
                 Console.Clear();
                 Console.Write("Deseja realizar uma nova operação? Y/N: ");
                 string userResponse = Console.ReadLine();
