@@ -9,7 +9,7 @@ Recursos:
 * Tratamento básico de erros (divisão por zero).
 * Interface de console fácil de entender.
 * Como Usar:
-
+##
 1. Clone o repositório: git clone https://github.com/romeoliveirasantos/Basic_console_calculator.git
 2. Navegue até o diretório do projeto.
 3. Compile o código:  Program.cs
